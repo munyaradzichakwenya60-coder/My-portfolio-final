@@ -6,7 +6,7 @@
     "tech": ["React", "Tailwind CSS", "", "JavaScript"],
     "github": "",
     "demo": "#",
-    "img": "/public/images/Agri link zim.png"
+    "img": "/My-portfolio-final/images/Agri link zim.png"
   },
   {
     "name": "Restaurant Project",
@@ -15,7 +15,7 @@
     "tech": ["React", "Vite", "Styled Components", "JavaScript"],
     "github": "https://github.com/munyaradzichakwenya60-coder/Restaurant-project.git",
     "demo": "https://munyaradzichakwenya60-coder.github.io/Restaurant-project/",
-    "img": "/public/images/image.png"
+    "img": "/My-portfolio-final/images/image.png"
   },
   {
     "name": "Zim Pro Verify",
@@ -24,7 +24,7 @@
     "tech": ["React", "Vite", "Styled Components", "JavaScript"],
     "github": "#",
     "demo": "#",
-    "img": "/public/images/Zim Pro Verify.png"
+    "img": "/My-portfolio-final/images/Zim Pro Verify.png"
   },
   {
     "name": "Weather App",
@@ -33,7 +33,7 @@
     "tech": ["html", "css", "javascript"],
     "github": "https://github.com/munyaradzichakwenya60-coder/Weather-forecast.git",
     "demo": "https://munyaradzichakwenya60-coder.github.io/Weather-forecast/",
-    "img": "/public/images/weather app.png"
+    "img": "/My-portfolio-final/images/weather app.png"
   },
   {
     "name": "Landing Page",
@@ -42,7 +42,7 @@
     "tech": ["html", "css", "javascript"],
     "github": "https://github.com/munyaradzichakwenya60-coder/Website-basics.git",
     "demo": "https://munyaradzichakwenya60-coder.github.io/Website-basics/",
-    "img": "/public/images/website basics.png"
+    "img": "/My-portfolio-final/images/website basics.png"
   },
   {
     "name": "Bakery Website",
@@ -51,6 +51,6 @@
     "tech": ["html", "css", "javascript"],
     "github": "https://github.com/munyaradzichakwenya60-coder/Bakery-website.git",
     "demo": "https://munyaradzichakwenya60-coder.github.io/Bakery-website/",
-    "img": "/public/images/bakery.png"
+    "img": "/My-portfolio-final/images/bakery.png"
   }
 ]
