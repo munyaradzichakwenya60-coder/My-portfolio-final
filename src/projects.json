@@ -1,0 +1,56 @@
+[
+  {
+    "name": "AgriLink Zimbabwe",
+    "cat": "Business",
+    "desc": "A multi-platform application designed for diaspora plot sponsorship and urban market vendors, focusing on climate-smart agriculture and seamless market access.",
+    "tech": ["React", "Tailwind CSS", "", "JavaScript"],
+    "github": "",
+    "demo": "#",
+    "img": "/public/images/Agri link zim.png"
+  },
+  {
+    "name": "Restaurant Project",
+    "cat": "Business",
+    "desc": "A mobile-first web application created for a local boutique business, featuring an integrated QR-code dynamic menu and real-time reservation system.",
+    "tech": ["React", "Vite", "Styled Components", "JavaScript"],
+    "github": "https://github.com/munyaradzichakwenya60-coder/Restaurant-project.git",
+    "demo": "https://munyaradzichakwenya60-coder.github.io/Restaurant-project/",
+    "img": "/public/images/image.png"
+  },
+  {
+    "name": "Zim Pro Verify",
+    "cat": "Business",
+    "desc": "A premium automobile web ecosystem optimized with detailed car inventory management pipelines, custom filters, and full client-side checkout flows.",
+    "tech": ["React", "Vite", "Styled Components", "JavaScript"],
+    "github": "#",
+    "demo": "#",
+    "img": "/public/images/Zim Pro Verify.png"
+  },
+  {
+    "name": "Weather App",
+    "cat": "Gift",
+    "desc": "A clean, modern community management portal designed with accessible structural navigation to connect community members with digital events and scheduling.",
+    "tech": ["html", "css", "javascript"],
+    "github": "https://github.com/munyaradzichakwenya60-coder/Weather-forecast.git",
+    "demo": "https://munyaradzichakwenya60-coder.github.io/Weather-forecast/",
+    "img": "/public/images/weather app.png"
+  },
+  {
+    "name": "Landing Page",
+    "cat": "Personal",
+    "desc": "A high-fidelity landing page duplicating premium e-commerce design structures, focusing heavily on sliding elements and responsive UI component behavior.",
+    "tech": ["html", "css", "javascript"],
+    "github": "https://github.com/munyaradzichakwenya60-coder/Website-basics.git",
+    "demo": "https://munyaradzichakwenya60-coder.github.io/Website-basics/",
+    "img": "/public/images/website basics.png"
+  },
+  {
+    "name": "Bakery Website",
+    "cat": "Business",
+    "desc": "An upcoming systems integration project designed to expand automated workflow actions and microservice coordination pipelines.",
+    "tech": ["html", "css", "javascript"],
+    "github": "https://github.com/munyaradzichakwenya60-coder/Bakery-website.git",
+    "demo": "https://munyaradzichakwenya60-coder.github.io/Bakery-website/",
+    "img": "/public/images/bakery.png"
+  }
+]
