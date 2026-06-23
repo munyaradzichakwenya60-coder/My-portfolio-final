@@ -1,5 +1,11 @@
 import projects from './projects.json';
 
+// Process projects to add BASE_URL to image paths
+const processedProjects = projects.map(proj => ({
+  ...proj,
+  img: proj.img ? `${import.meta.env.BASE_URL}${proj.img}` : proj.img
+}));
+
 export const portfolioData = {
   hero: {
     tagline: "AVAILABLE FOR WORK",
@@ -7,7 +13,7 @@ export const portfolioData = {
     title: "I build high-fidelity web & mobile applications.",
     description: "Software Developer specializing in crafting modern, high-fidelity interfaces and custom digital experiences. Focused on building robust, scalable applications with React, Vite, and modern cloud architectures.",
     email: "munyaradzichakwenya60gmail.com",
-    cvLink: "#",
+    cvLink: `${import.meta.env.BASE_URL}assets/Munyaradzi_Chakwenya_CV.pdf`,
   },
   about: {
     eyebrow: "01 — ABOUT ME",
@@ -31,7 +37,7 @@ export const portfolioData = {
       { name: "Enhancing ux workflow with AI", by: "Uxcel" },
     ],
   },
-  projects: projects,
+  projects: processedProjects,
   contact: {
     eyebrow: "03 — LET'S CONNECT",
     heading: "Open to new opportunities.",

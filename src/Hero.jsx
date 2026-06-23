@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { useState } from 'react';
+import CVViewer from './CVViewer';
 
 const orbFloat = keyframes`
   0%, 100% { transform: translateY(0); }
@@ -279,36 +281,46 @@ const OrbBadgeText = styled.p`
 `;
 
 const Hero = ({ data }) => {
+  const [cvOpen, setCvOpen] = useState(false);
+
+  const handleCvClick = (e) => {
+    e.preventDefault();
+    setCvOpen(true);
+  };
+
   return (
-    <HeroSection id="hero">
-      <HeroGrid>
-        <HeroLeft>
-          <HeroTag className="fu d1">{data.tagline}</HeroTag>
-          <HeroTitle className="fu d2">
-            <span>{data.name.split(' ')[0]}</span>
-            <HeroName>{data.name.split(' ')[1]}</HeroName>
-          </HeroTitle>
-          <HeroDesc className="fu d3">{data.description}</HeroDesc>
-          <HeroBtns className="fu d4">
-            <Button href="#contact" $variant="fill">
-              Get in touch <EmailIcon />
-            </Button>
-            <Button href={data.cvLink} target="_blank" rel="noopener">
-              View CV <DescriptionIcon />
-            </Button>
-          </HeroBtns>
-        </HeroLeft>
-        <HeroRight className="fu d5">
-          <OrbWrap>
-            <OrbRingOuter />
-            <OrbRingMid />
-            <OrbSphere />
-            <OrbDot $top="20%" $left="85%" $delay="0.5s" />
-            <OrbDot $top="75%" $left="15%" $delay="1.2s" />
-          </OrbWrap>
-        </HeroRight>
-      </HeroGrid>
-    </HeroSection>
+    <>
+      <HeroSection id="hero">
+        <HeroGrid>
+          <HeroLeft>
+            <HeroTag className="fu d1">{data.tagline}</HeroTag>
+            <HeroTitle className="fu d2">
+              <span>{data.name.split(' ')[0]}</span>
+              <HeroName>{data.name.split(' ')[1]}</HeroName>
+            </HeroTitle>
+            <HeroDesc className="fu d3">{data.description}</HeroDesc>
+            <HeroBtns className="fu d4">
+              <Button href="#contact" $variant="fill">
+                Get in touch <EmailIcon />
+              </Button>
+              <Button href={data.cvLink} target="_blank" rel="noopener noreferrer" onClick={handleCvClick}>
+                View CV <DescriptionIcon />
+              </Button>
+            </HeroBtns>
+          </HeroLeft>
+          <HeroRight className="fu d5">
+            <OrbWrap>
+              <OrbRingOuter />
+              <OrbRingMid />
+              <OrbSphere />
+              <OrbDot $top="20%" $left="85%" $delay="0.5s" />
+              <OrbDot $top="75%" $left="15%" $delay="1.2s" />
+            </OrbWrap>
+          </HeroRight>
+        </HeroGrid>
+      </HeroSection>
+      <CVViewer cvLink={data.cvLink} isOpen={cvOpen} onClose={() => setCvOpen(false)} />
+    </>
   );
 };
 
