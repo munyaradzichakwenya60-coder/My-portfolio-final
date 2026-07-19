@@ -208,7 +208,7 @@ const Footer = () => {
       <ParticleCanvas ref={canvasRef} />
       <FooterContent>
         <FooterSocials>
-          <SocialLink href="" target="https://github.com/munyaradzichakwenya60-coder" rel="noopener" aria-label="GitHub">
+          <SocialLink href="https://github.com/munyaradzichakwenya60-coder" target="_blank" rel="noopener" aria-label="GitHub">
             <GitHubIcon />
           </SocialLink>
           <SocialLink href="https://www.linkedin.com/in/munyaradzi-chakwenya" target="_blank" rel="noopener" aria-label="LinkedIn">

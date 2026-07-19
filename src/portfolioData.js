@@ -12,7 +12,7 @@ export const portfolioData = {
     name: "Munyaradzi Chakwenya.",
     title: "I build high-fidelity web & mobile applications.",
     description: "Software Developer specializing in crafting modern, high-fidelity interfaces and custom digital experiences. Focused on building robust, scalable applications with React, Vite, and modern cloud architectures.",
-    email: "munyaradzichakwenya60gmail.com",
+    email: "munyaradzichakwenya60@gmail.com",
     cvLink: `${import.meta.env.BASE_URL}assets/Munyaradzi_Chakwenya_CV.pdf`,
   },
   about: {

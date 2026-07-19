@@ -1,14 +1,5 @@
 [
   {
-    "name": "AgriLink Zimbabwe",
-    "cat": "Business",
-    "desc": "A multi-platform application designed for diaspora plot sponsorship and urban market vendors, focusing on climate-smart agriculture and seamless market access.",
-    "tech": ["React", "Tailwind CSS", "", "JavaScript"],
-    "github": "",
-    "demo": "#",
-    "img": "images/Agri link zim.png"
-  },
-  {
     "name": "Restaurant Project",
     "cat": "Business",
     "desc": "A mobile-first web application created for a local boutique business, featuring an integrated QR-code dynamic menu and real-time reservation system.",
@@ -18,13 +9,22 @@
     "img": "images/image.png"
   },
   {
-    "name": "Zim Pro Verify",
+    "name": "Apple-cloneV2",
+    "cat": "Personal",
+    "desc": "A high-fidelity replica of the Apple website showcasing advanced React components, interactive product sliders, and dynamic layout designs.",
+    "tech": ["React", "Vite", "JavaScript"],
+    "github": "https://github.com/munyaradzichakwenya60-coder/apple-clone-v2.git",
+    "demo": "https://munyaradzichakwenya60-coder.github.io/apple-clone-v2/",
+    "img": "images/website basics.png"
+  },
+  {
+    "name": "Event Planners",
     "cat": "Business",
-    "desc": "A premium automobile web ecosystem optimized with detailed car inventory management pipelines, custom filters, and full client-side checkout flows.",
-    "tech": ["React", "Vite", "Styled Components", "JavaScript"],
-    "github": "#",
-    "demo": "#",
-    "img": "images/Zim Pro Verify.png"
+    "desc": "A comprehensive event planning and management platform designed to organize client schedules, bookings, and digital event programs seamlessly.",
+    "tech": ["React", "Vite", "JavaScript"],
+    "github": "https://github.com/munyaradzichakwenya60-coder/event-planners.git",
+    "demo": "https://munyaradzichakwenya60-coder.github.io/event-planners/",
+    "img": "images/image.png"
   },
   {
     "name": "Weather App",

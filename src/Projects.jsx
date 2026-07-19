@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import Repositories from './Repositories';
 
 const Section = styled.section`
   padding: calc(${({ theme }) => theme.sizes.navH} + 5rem) ${({ theme }) => theme.sizes.pad} 6rem;
@@ -237,6 +238,7 @@ const Projects = ({ data }) => {
     { label: 'Personal', value: 'Personal' },
     { label: 'Business', value: 'Business' },
     { label: 'Gift', value: 'Gift' },
+    { label: 'All GitHub Repositories', value: 'github_repos' }
   ];
 
   return (
@@ -260,39 +262,43 @@ const Projects = ({ data }) => {
             ))}
           </FilterRow>
         </ProjHeader>
-        <ProjGrid>
-          {filteredProjects.map((p, i) => (
-            <ProjCard key={p.name} className="fu" style={{ animationDelay: `${i * 0.07}s` }}>
-              <ProjCat>{p.cat}</ProjCat>
-              <ProjThumb>
-                {p.img ? (
-                  <img src={p.img} alt={p.name} loading="lazy" />
-                ) : (
-                  <PlaceholderText>{p.cat.toUpperCase()}</PlaceholderText>
-                )}
-              </ProjThumb>
-              <ProjName>{p.name}</ProjName>
-              <ProjDesc>{p.desc}</ProjDesc>
-              <TechTags>
-                {p.tech.map((t) => (
-                  <TechTag key={t}>{t}</TechTag>
-                ))}
-              </TechTags>
-              <ProjLinks>
-                {p.demo && (
-                  <ProjLink href={p.demo} target="_blank" rel="noopener">
-                    Live Demo <LaunchIcon />
-                  </ProjLink>
-                )}
-                {p.github && (
-                  <ProjLink href={p.github} target="_blank" rel="noopener">
-                    GitHub <GitHubIcon />
-                  </ProjLink>
-                )}
-              </ProjLinks>
-            </ProjCard>
-          ))}
-        </ProjGrid>
+        {filter === 'github_repos' ? (
+          <Repositories />
+        ) : (
+          <ProjGrid>
+            {filteredProjects.map((p, i) => (
+              <ProjCard key={p.name} className="fu" style={{ animationDelay: `${i * 0.07}s` }}>
+                <ProjCat>{p.cat}</ProjCat>
+                <ProjThumb>
+                  {p.img ? (
+                    <img src={p.img} alt={p.name} loading="lazy" />
+                  ) : (
+                    <PlaceholderText>{p.cat.toUpperCase()}</PlaceholderText>
+                  )}
+                </ProjThumb>
+                <ProjName>{p.name}</ProjName>
+                <ProjDesc>{p.desc}</ProjDesc>
+                <TechTags>
+                  {p.tech.filter(t => t && t.trim() !== "").map((t) => (
+                    <TechTag key={t}>{t}</TechTag>
+                  ))}
+                </TechTags>
+                <ProjLinks>
+                  {p.demo && (
+                    <ProjLink href={p.demo} target="_blank" rel="noopener">
+                      Live Demo <LaunchIcon />
+                    </ProjLink>
+                  )}
+                  {p.github && (
+                    <ProjLink href={p.github} target="_blank" rel="noopener">
+                      GitHub <GitHubIcon />
+                    </ProjLink>
+                  )}
+                </ProjLinks>
+              </ProjCard>
+            ))}
+          </ProjGrid>
+        )}
       </Inner>
     </Section>
   );
