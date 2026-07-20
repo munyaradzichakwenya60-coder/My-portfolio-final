@@ -2,7 +2,11 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import Repositories from './Repositories';
+import CaseStudyModal from './CaseStudyModal';
+import { caseStudies } from './caseStudies';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 const Section = styled.section`
   padding: calc(${({ theme }) => theme.sizes.navH} + 5rem) ${({ theme }) => theme.sizes.pad} 6rem;
@@ -227,6 +231,17 @@ const ProjLink = styled.a`
 
 const Projects = ({ data }) => {
   const [filter, setFilter] = useState('all');
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
+  const revealRef = useScrollReveal();
+
+  const handleOpenCaseStudy = (projectName) => {
+    const study = caseStudies[projectName];
+    if (study) {
+      setSelectedCaseStudy(study);
+      setModalOpen(true);
+    }
+  };
 
   const filteredProjects = (filter === 'all'
     ? data
@@ -242,7 +257,7 @@ const Projects = ({ data }) => {
   ];
 
   return (
-    <Section id="projects">
+    <Section id="projects" className="reveal" ref={revealRef}>
       <Inner>
         <ProjHeader>
           <ProjHeaderLeft>
@@ -294,12 +309,22 @@ const Projects = ({ data }) => {
                       GitHub <GitHubIcon />
                     </ProjLink>
                   )}
+                  {caseStudies[p.name] && (
+                    <ProjLink as="button" onClick={() => handleOpenCaseStudy(p.name)}>
+                      Case Study <LibraryBooksIcon />
+                    </ProjLink>
+                  )}
                 </ProjLinks>
               </ProjCard>
             ))}
           </ProjGrid>
         )}
       </Inner>
+      <CaseStudyModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        project={selectedCaseStudy}
+      />
     </Section>
   );
 };

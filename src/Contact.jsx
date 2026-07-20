@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import SendIcon from '@mui/icons-material/Send';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircle';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 const Section = styled.section`
   padding: calc(${({ theme }) => theme.sizes.navH} + 5rem) ${({ theme }) => theme.sizes.pad} 6rem;
@@ -191,6 +192,7 @@ const StyledTextField = muiStyled(TextField)(({ theme }) => ({
 
 const Contact = ({ data }) => {
   const [status, setStatus] = useState('');
+  const revealRef = useScrollReveal();
 
   const getIcon = (name) => {
     switch (name.toLowerCase()) {
@@ -227,7 +229,7 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <Section id="contact">
+    <Section id="contact" className="reveal" ref={revealRef}>
       <Inner>
         <ContactGrid>
           <div>

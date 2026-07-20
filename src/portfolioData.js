@@ -32,9 +32,10 @@ export const portfolioData = {
       "Figma",
     ],
     certifications: [
-      { name: "Design Thinking", by: "Uxcel" },
-      { name: "Fundamentals of UI", by: "Uxcel" },
-      { name: "Enhancing ux workflow with AI", by: "Uxcel" },
+      { name: "Software Development Track Specialization", by: "Uncommon.org" },
+      { name: "Responsive Web Design", by: "Free code camp" },
+      { name: "Python", by: "Coursera" },
+      { name: "Machine Learning & AI", by: "Kaggle" },
     ],
   },
   projects: processedProjects,

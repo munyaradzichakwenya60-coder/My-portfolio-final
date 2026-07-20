@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import CodeIcon from '@mui/icons-material/Code';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import TerminalIcon from '@mui/icons-material/Terminal';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 const Section = styled.section`
   padding: calc(${({ theme }) => theme.sizes.navH} + 5rem) ${({ theme }) => theme.sizes.pad} 6rem;
@@ -178,9 +179,10 @@ const AboutImage = styled.img`
 
 const About = ({ data }) => {
   const [activeTab, setActiveTab] = useState('skills');
+  const revealRef = useScrollReveal();
 
   return (
-    <Section id="about">
+    <Section id="about" className="reveal" ref={revealRef}>
       <Inner>
         <AboutGrid>
           <div>

@@ -9,7 +9,9 @@ const NavWrapper = styled.nav`
   right: 0;
   z-index: 200;
   height: ${({ theme }) => theme.sizes.navH};
-  background: ${({ theme }) => theme.colors.paper};
+  background: ${({ theme }) => theme.colors.paper === '#0f0e0d' ? 'rgba(15, 14, 13, 0.75)' : 'rgba(247, 245, 242, 0.75)'};
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid ${({ theme }) => theme.colors.rule};
   display: flex;
   align-items: center;
@@ -93,6 +95,7 @@ const Nav = ({ isDarkMode, toggleTheme }) => {
         <NavRight>
           <NavLinks>
             <li><NavLink href="#about">About</NavLink></li>
+            <li><NavLink href="#experience">Experience</NavLink></li>
             <li><NavLink href="#projects">Projects</NavLink></li>
             <li><NavLink href="#contact">Contact</NavLink></li>
           </NavLinks>
