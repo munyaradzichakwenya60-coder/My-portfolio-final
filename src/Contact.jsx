@@ -192,7 +192,7 @@ const StyledTextField = muiStyled(TextField)(({ theme }) => ({
 
 const Contact = ({ data }) => {
   const [status, setStatus] = useState('');
-  const revealRef = useScrollReveal();
+  const [revealRef, isRevealed] = useScrollReveal();
 
   const getIcon = (name) => {
     switch (name.toLowerCase()) {
@@ -229,7 +229,7 @@ const Contact = ({ data }) => {
   };
 
   return (
-    <Section id="contact" className="reveal" ref={revealRef}>
+    <Section id="contact" className={`reveal ${isRevealed ? 'revealed' : ''}`} ref={revealRef}>
       <Inner>
         <ContactGrid>
           <div>

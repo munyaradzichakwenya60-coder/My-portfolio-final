@@ -233,7 +233,7 @@ const Projects = ({ data }) => {
   const [filter, setFilter] = useState('all');
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const revealRef = useScrollReveal();
+  const [revealRef, isRevealed] = useScrollReveal();
 
   const handleOpenCaseStudy = (projectName) => {
     const study = caseStudies[projectName];
@@ -257,7 +257,7 @@ const Projects = ({ data }) => {
   ];
 
   return (
-    <Section id="projects" className="reveal" ref={revealRef}>
+    <Section id="projects" className={`reveal ${isRevealed ? 'revealed' : ''}`} ref={revealRef}>
       <Inner>
         <ProjHeader>
           <ProjHeaderLeft>

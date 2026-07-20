@@ -179,10 +179,10 @@ const AboutImage = styled.img`
 
 const About = ({ data }) => {
   const [activeTab, setActiveTab] = useState('skills');
-  const revealRef = useScrollReveal();
+  const [revealRef, isRevealed] = useScrollReveal();
 
   return (
-    <Section id="about" className="reveal" ref={revealRef}>
+    <Section id="about" className={`reveal ${isRevealed ? 'revealed' : ''}`} ref={revealRef}>
       <Inner>
         <AboutGrid>
           <div>

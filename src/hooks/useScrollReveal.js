@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function useScrollReveal(threshold = 0.15) {
   const ref = useRef(null);
+  const [isRevealed, setIsRevealed] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -10,7 +11,7 @@ export function useScrollReveal(threshold = 0.15) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add('revealed');
+          setIsRevealed(true);
           observer.unobserve(el);
         }
       },
@@ -21,5 +22,5 @@ export function useScrollReveal(threshold = 0.15) {
     return () => observer.disconnect();
   }, [threshold]);
 
-  return ref;
+  return [ref, isRevealed];
 }

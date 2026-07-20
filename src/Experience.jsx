@@ -162,7 +162,7 @@ const DetailItem = styled.li`
 `;
 
 export default function Experience() {
-  const revealRef = useScrollReveal();
+  const [revealRef, isRevealed] = useScrollReveal();
 
   const experiences = [
     {
@@ -200,7 +200,7 @@ export default function Experience() {
   ];
 
   return (
-    <Section id="experience" className="reveal" ref={revealRef}>
+    <Section id="experience" className={`reveal ${isRevealed ? 'revealed' : ''}`} ref={revealRef}>
       <Inner>
         <Eyebrow>02 — WORK & EDUCATION</Eyebrow>
         <Heading>My Professional Journey</Heading>
