@@ -15,7 +15,7 @@
     "tech": ["React", "Vite", "JavaScript"],
     "github": "https://github.com/munyaradzichakwenya60-coder/apple-clone-v2.git",
     "demo": "https://munyaradzichakwenya60-coder.github.io/apple-clone-v2/",
-    "img": "images/website basics.png"
+    "img": "images/apple-clone.jpg"
   },
   {
     "name": "Event Planners",
@@ -24,7 +24,7 @@
     "tech": ["React", "Vite", "JavaScript"],
     "github": "https://github.com/munyaradzichakwenya60-coder/event-planners.git",
     "demo": "https://munyaradzichakwenya60-coder.github.io/event-planners/",
-    "img": "images/image.png"
+    "img": "images/event-planners.jpg"
   },
   {
     "name": "Weather App",
